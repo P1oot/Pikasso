@@ -14,3 +14,7 @@ class File(models.Model):
         verbose_name='Статус загрузки',
         default=False,
         )
+
+    class Meta:
+        verbose_name = 'Файл'
+        verbose_name_plural = 'Файлы'
