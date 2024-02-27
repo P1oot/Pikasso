@@ -2,13 +2,8 @@ from rest_framework import serializers
 from .models import File
 
 
-class CreateFileSerializer(serializers.ModelSerializer):
+class FileSerializer(serializers.ModelSerializer):
     class Meta:
         model = File
-        fields = ('file',)
-
-
-class ListFileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = File
-        fields = ('file', 'upload_at', 'processed',)
+        fields = ('id', 'file', 'upload_at', 'processed',)
+        read_only_fields = ('id', 'upload_at', 'processed',)

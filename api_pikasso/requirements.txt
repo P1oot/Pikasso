@@ -1,2 +1,6 @@
 Django==4.2.10
 djangorestframework==3.14.0
+celery==5.3.6
+redis==5.0.1
+eventlet==0.35.1
+pillow==10.2.0

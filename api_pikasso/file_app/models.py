@@ -1,4 +1,5 @@
 from django.db import models
+import os
 
 
 class File(models.Model):
@@ -14,6 +15,9 @@ class File(models.Model):
         verbose_name='Статус загрузки',
         default=False,
         )
+
+    def filename(self):
+        return os.path.basename(self.file.name)
 
     class Meta:
         verbose_name = 'Файл'
